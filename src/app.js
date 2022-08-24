@@ -16,18 +16,20 @@ let when = [
   "while I was praying"
 ];
 
-window.onload = function() {
-  let randWho = who[Math.floor(Math.random() * who.length)];
-  let randAction = action[Math.floor(Math.random() * action.length)];
-  let randWhat = what[Math.floor(Math.random() * what.length)];
-  let randWhen = when[Math.floor(Math.random() * when.length)];
+function newExcuse() {
+  let randomWho = who[Math.floor(Math.random() * who.length)];
+  let randomAction = action[Math.floor(Math.random() * action.length)];
+  let randomWhat = what[Math.floor(Math.random() * what.length)];
+  let randomWhen = when[Math.floor(Math.random() * when.length)];
 
   //write your code here
   document.querySelector(
     "#excuse"
-  ).innerHTML = `${randWho} ${randAction} ${randWhat} ${randWhen}`;
+  ).innerHTML = `${randomWho} ${randomAction} ${randomWhat} ${randomWhen}`;
 
   document.querySelector(
     "#excuseHeader"
   ).innerHTML = `OMG you will not believe me but...`;
-};
+}
+
+window.onload = newExcuse();
